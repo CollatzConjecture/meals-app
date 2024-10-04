@@ -1,11 +1,12 @@
-import MealsItem from "./meal-item";
+import MealItem from './meal-item';
+import classes from './meals-grid.module.css';
 
 export default function MealsGrid({ meals }) {
   return (
-    <ul>
+    <ul className={classes.meals}>
       {meals.map((meal) => (
         <li key={meal.id}>
-          <MealsItem {...meal} />
+          <MealItem {...meal} />
         </li>
       ))}
     </ul>
